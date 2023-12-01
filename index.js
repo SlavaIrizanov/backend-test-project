@@ -1,0 +1,21 @@
+import express from 'express'
+import mongoose from 'mongoose'
+import router from "./router.js"
+
+const PORT = 5000
+const DB_URL = `mongodb+srv://veaceslavunifun:aTqj5vT1o8hNYHOm@cluster0.dyztyod.mongodb.net/?retryWrites=true&w=majority`
+const app = express()
+
+app.use(express.json())
+app.use('/api',router)
+
+async function startApp(){
+    try {
+        await mongoose.connect(DB_URL) // перед стартом приложения подключаемся к базеданных
+        app.listen(PORT, () => console.log('server started on PORT ', + PORT))
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+startApp()
