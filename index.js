@@ -4,7 +4,7 @@ import router from "./router.js"
 import fileUpload from 'express-fileupload'
 
 const PORT = 5000
-const DB_URL = `mongodb+srv://veaceslavunifun:aTqj5vT1o8hNYHOm@cluster0.dyztyod.mongodb.net/?retryWrites=true&w=majority`
+const DB_URL = `mongodb+srv://veaceslav:T1o8hNYHOm@cluster0.dyztyod.mongodb.net/?retryWrites=true&w=majority`
 const app = express()
 
 app.use(express.json())
